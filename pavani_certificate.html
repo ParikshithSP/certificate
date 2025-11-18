@@ -1,33 +1,46 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Pavani Certificate</title>
-<style>
-  body{font-family:system-ui,Arial,Helvetica,sans-serif;background:#0f1720;color:#e6eef6;margin:0}
-  .top{background:#081025;padding:12px 16px;color:#fff;display:flex;align-items:center;gap:12px}
-  .host{font-weight:700}
-  .box{max-width:720px;margin:28px auto;background:#071022;border-radius:10px;padding:20px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
-  pre{white-space:pre-wrap;font-family:monospace;font-size:15px;color:#dfeffd;background:transparent;border:0;margin:0}
-  .label{color:#93c5fd;font-weight:600;margin-bottom:8px;display:block}
-</style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Pavani Certificate</title>
+  <style>
+    body{font-family:system-ui,Arial,Helvetica,sans-serif;background:#0f1720;color:#e6eef6;margin:0}
+    .top{background:#081025;padding:12px 16px;color:#fff;display:flex;align-items:center;gap:12px}
+    .host{font-weight:700}
+    .box{max-width:720px;margin:28px auto;background:#071022;border-radius:10px;padding:20px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    pre{white-space:pre-wrap;font-family:monospace;font-size:15px;color:#dfeffd;background:transparent;border:0;margin:0}
+    .label{color:#93c5fd;font-weight:600;margin-bottom:8px;display:block}
+    .kv{font-family:inherit; font-size:15px; color:#dfeffd;}
+    .kv b{color:#93c5fd}
+  </style>
 </head>
 <body>
-  <div class="top"><div style="width:10px;height:10px;border-radius:50%;background:#22c55e"></div><div class="host">south-1.amazonaws.com</div></div>
-  <div class="box">
-    <div class="label">Certificate data</div>
-    <pre id="content"></pre>
+  <div class="top">
+    <div style="width:10px;height:10px;border-radius:50%;background:#22c55e"></div>
+    <div class="host">south-1.amazonaws.com</div>
   </div>
 
-<script>
-  const data = {
-    "Certificate ID":"681a9b4275906dbd8a16ae",
-    "Certificate":"Basics of Stock Market",
-    "Issued To":"Pavani V Patel",
-    "Issued On":"05 May 2025"
-  };
-  document.getElementById('content').textContent = JSON.stringify(data, null, 2);
-</script>
+  <div class="box" role="main" aria-labelledby="title">
+    <div id="title" class="label">Certificate data</div>
+
+    <!-- Static, visible certificate details (no JavaScript needed) -->
+    <div class="kv">
+      <div><b>Certificate ID:</b> 681a9b4275906dbd8a16ae</div>
+      <div style="margin-top:8px"><b>Certificate:</b> Basics of Stock Market</div>
+      <div style="margin-top:8px"><b>Issued To:</b> Pavani V Patel</div>
+      <div style="margin-top:8px"><b>Issued On:</b> 05 May 2025</div>
+    </div>
+
+    <!-- Also include a raw JSON view for reference -->
+    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.04);margin:18px 0"/>
+    <div class="label">Raw JSON</div>
+    <pre>{
+  "Certificate ID": "681a9b4275906dbd8a16ae",
+  "Certificate": "Basics of Stock Market",
+  "Issued To": "Pavani V Patel",
+  "Issued On": "05 May 2025"
+}</pre>
+  </div>
 </body>
 </html>
